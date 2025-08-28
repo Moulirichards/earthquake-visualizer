@@ -6,7 +6,7 @@
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist",
-        "installCommand": "npm install --legacy-peer-deps",
+        "installCommand": "npm install --legacy-peer-deps && chmod +x node_modules/.bin/vite",
         "buildCommand": "npm run build"
       }
     }
