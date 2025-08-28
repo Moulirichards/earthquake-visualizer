@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 255 255% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 255 255% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 15% 90%;
+    --secondary-foreground: 215 25% 25%;
+
+    --muted: 210 15% 95%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 25 95% 95%;
+    --accent-foreground: 14 91% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 85%;
+    --input: 210 15% 92%;
+    --ring: 217 91% 60%;
+
+    
+    --seismic-low: 120 60% 50%;
+    --seismic-medium: 194 100% 50%;
+    --seismic-high: 42 96% 50%; 
+    --seismic-extreme: 0 84% 60%; 
+
+    
+    --gradient-seismic: hsl(var(--primary));
+    --gradient-map: hsl(var(--background));
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    
+    --background: 215 30% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 215 25% 10%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 215 25% 10%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 20% 15%;
+    --secondary-foreground: 210 20% 85%;
+
+    --muted: 215 20% 12%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 215 20% 15%;
+    --accent-foreground: 210 20% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 18%;
+    --input: 215 20% 15%;
+    --ring: 217 91% 60%;
+
+    
+    --gradient-seismic: hsl(var(--primary));
+    --gradient-map: hsl(var(--background));
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    
+    --seismic-low: 120 60% 45%;
+    --seismic-medium: 194 100% 55%;
+    --seismic-high: 42 96% 55%; 
+    --seismic-extreme: 0 84% 60%; 
+  }
+}
+
+@layer base {
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  
+  .leaflet-container {
+    @apply bg-muted;
+  }
+  
+  .leaflet-popup-content-wrapper {
+    @apply bg-card text-card-foreground border border-border rounded-lg shadow-lg;
+  }
+  
+  .leaflet-popup-tip {
+    @apply bg-card border-border;
+  }
+}
