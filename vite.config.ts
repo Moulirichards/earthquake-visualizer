@@ -5,6 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 
 export default defineConfig(({ mode }) => ({
+  base: process.env.NODE_ENV === 'production' ? '/earthquake-visualizer/' : '/',
   server: {
     host: "::",
     port: 8080,
